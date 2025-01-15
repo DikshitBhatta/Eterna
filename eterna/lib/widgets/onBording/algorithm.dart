@@ -12,7 +12,10 @@ Widget build(BuildContext context){
     child:Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Image(image:AssetImage('assets/onbording/image1.png'),height: 400,),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(20),
+          child:Image(image:AssetImage('assets/onbording/image1.png'),height: 400,),
+        ),
         Text('Algorithm',style:TextStyle(color: Color(0xFF5d2f52),
                                       fontSize: 32.00,
                                       fontWeight: FontWeight.bold

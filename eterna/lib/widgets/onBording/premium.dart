@@ -13,7 +13,10 @@ class PremiumState extends State<Premium>{
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Image(image: AssetImage('assets/onbording/img3.png'),height: 400,),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child:Image(image: AssetImage('assets/onbording/img3.png'),height: 400.00,),
+          ),
           Text('Premium',style:TextStyle(color: Color(0xFF5d2f52),
                                         fontSize: 32.00,
                                         fontWeight: FontWeight.bold

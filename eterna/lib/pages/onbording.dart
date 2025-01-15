@@ -33,7 +33,14 @@ class OnbordingState extends State<Onbording>{
           child: Text('Create an Account',style:TextStyle(color:Colors.white,fontSize: 18.00),),
 
         ),
-        Text('Already have an account? Sign in',style:TextStyle(color:Color(0XFF7b4692)),),
+        SizedBox(height: 15,),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('Already have an account? ',),
+            Text('Sign in',style:TextStyle(color:Color(0XFF7b4692)),),
+          ],
+        ),
         SizedBox(height: 30.00),
       ],
     ),),);

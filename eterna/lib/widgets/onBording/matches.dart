@@ -13,8 +13,11 @@ class MatchState extends State<Matches>{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-           Image(image: AssetImage('assets/onbording/img2.png'),height: 400,), 
-        Text('Matches',style: TextStyle(color: Color(0xFF5d2f52),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child:Image(image: AssetImage('assets/onbording/img2.png'),height: 400,width: 400,), 
+            ),
+            Text('Matches',style: TextStyle(color: Color(0xFF5d2f52),
                                         fontSize: 32.00,
                                         fontWeight: FontWeight.bold,
                                         ),
