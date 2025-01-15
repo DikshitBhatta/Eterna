@@ -2,7 +2,7 @@ import'package:flutter/material.dart';
 import '../widgets/onBording/algorithm.dart';
 import '../widgets/onBording/matches.dart';
 import '../widgets/onBording/premium.dart';
-
+import '../pages/signup_page.dart';
 class Onbording extends StatefulWidget{
   const Onbording({super.key});
   @override
@@ -29,7 +29,7 @@ class OnbordingState extends State<Onbording>{
           style: ElevatedButton.styleFrom(
             backgroundColor: Color(0XFF7b4692),
           ),
-          onPressed: (){},
+          onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => SignupPage())),
           child: Text('Create an Account',style:TextStyle(color:Colors.white,fontSize: 18.00),),
 
         ),
