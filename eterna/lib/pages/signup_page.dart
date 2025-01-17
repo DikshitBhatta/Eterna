@@ -1,5 +1,6 @@
 import'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../pages/mobile_number.dart';
 
 class SignupPage extends StatelessWidget{
   const SignupPage({super.key});
@@ -39,7 +40,10 @@ class SignupPage extends StatelessWidget{
                 SizedBox(width: double.infinity,
                   height: 40,
                   child: ElevatedButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.push(context,
+                       MaterialPageRoute(builder: (context)=>MobileNumber()));
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0XFF7b4692),
                    ),
