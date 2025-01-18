@@ -1,5 +1,6 @@
 import 'package:eterna/pages/otp_timer.dart';
 import'package:flutter/material.dart';
+import '../pages/start_profile.dart';
 
 class MobileNumber extends StatelessWidget{
   const MobileNumber({super.key});
@@ -47,7 +48,7 @@ class MobileNumber extends StatelessWidget{
             ElevatedButton(
               onPressed: (){
                 Navigator.push(context, 
-                MaterialPageRoute(builder: (context)=>OtpTimer()));
+                MaterialPageRoute(builder: (context)=>StartProfile()));
               }, 
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color(0XFF7b4692),

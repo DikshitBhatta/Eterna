@@ -64,6 +64,8 @@ flutter:
     - assets/onbording/
     - assets/logo/
     - assets/svglogo/
+    - assets/add_friend.png
+    - assets/enablenotification.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
