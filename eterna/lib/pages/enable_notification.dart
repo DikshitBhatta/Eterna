@@ -1,3 +1,4 @@
+import 'package:eterna/pages/mainpage.dart';
 import 'package:flutter/material.dart';
 
 class EnableNotification extends StatefulWidget{
@@ -27,7 +28,9 @@ class EnableNotificationState extends State<EnableNotification>{
             ),
             ),
             SizedBox(height: 15,),
-            ElevatedButton(onPressed: (){},
+            ElevatedButton(onPressed: (){
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>MainPage()));
+            },
              style: ElevatedButton.styleFrom(
               backgroundColor: Color(0XFF7b4692),
               minimumSize: Size(MediaQuery.of(context).size.width * 0.8, 40),
