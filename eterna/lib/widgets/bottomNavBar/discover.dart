@@ -10,12 +10,17 @@ class DiscoverState extends State<Discover>{
   Widget build (BuildContext context){
     return Scaffold(
       body: SafeArea(child: Center(
+        child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 30.00),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
+                GestureDetector(
+                  onTap: (){},
+                  child: Image(image: AssetImage('assets/subs.png'),height: 50.00,width: 50.00,fit: BoxFit.cover,)),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -23,11 +28,69 @@ class DiscoverState extends State<Discover>{
                     Text('Chiago II',style: TextStyle(color: Colors.grey,fontSize: 16),),
                   ],
                 ),
-                SizedBox(width: 110,),
                 IconButton(onPressed: (){}, icon: Icon(Icons.filter_alt_outlined),iconSize: 30.00,color: Colors.grey,),
               ],
             ),
-            Image(image: AssetImage('assets/onbording/img3.png'),height: 600,width: 300,),
+            Expanded(  // Wrap PageView with Expanded
+              child: PageView.builder(
+                itemCount: 3,  // Number of profiles
+                itemBuilder: (context, index) {
+                  final profiles = [
+                    {'name': 'John Doe', 'image': 'assets/onbording/img3.png'},
+                    {'name': 'Sita Ram', 'image': 'assets/onbording/img2.png'},
+                    {'name': 'Gita', 'image': 'assets/onbording/image1.png'},
+                  ];
+                  
+                  return Stack(
+                    alignment: Alignment.center,
+                    children: <Widget>[
+                      Container(
+                        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color.fromRGBO(158, 158, 158, 0.5),
+                              spreadRadius: 2,
+                              blurRadius: 7,
+                              offset: Offset(0, 3),
+                            ),
+                          ],
+                          image: DecorationImage(
+                            image: AssetImage(profiles[index]['image']!),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 50,
+                        left: 30,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              profiles[index]['name']!,
+                              style: TextStyle(
+                                fontSize: 32,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black87,
+                              ),
+                            ),
+                            Text(
+                              'Profession',
+                              style: TextStyle(
+                                color: Colors.black87,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
+            SizedBox(height: 15),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
@@ -92,8 +155,9 @@ class DiscoverState extends State<Discover>{
                     icon: Icon(Icons.star),iconSize: 40.00,color: Colors.red,),
                 )
               ],
-            )
+            ),
           ],
+        ),
         ),
       ),
       ),

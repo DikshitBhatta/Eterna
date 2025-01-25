@@ -1,4 +1,5 @@
-import 'package:eterna/widgets/gallery.dart';
+import 'package:eterna/widgets/profile/gallery.dart';
+import 'package:eterna/widgets/profile/about_me.dart';
 import 'package:flutter/material.dart';
 class Profile extends StatefulWidget{
   const Profile({super.key});
@@ -73,7 +74,7 @@ class ProfileState extends State<Profile>{
                       ),
                       SizedBox(height: 20.00,),
                       showAbout
-                        ? Text('''Hi! I'm John Doe. I've been bitten by the travel bug hard and have spent the last few months making my way around (insert location). I feel most at home when I'm exploring different places and immersing myself in the rich culture and history of other countries. My work allows me to travel, which I'm super grateful for, and I'd love to meet you if you're up for an adventure!''')
+                        ? AboutMe()
                         : Gallery(),
                       
                     ],

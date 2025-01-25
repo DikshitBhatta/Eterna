@@ -1,5 +1,6 @@
+import 'package:eterna/pages/profile2.dart';
 import 'package:flutter/material.dart';
-import '../pages/gender_form.dart';
+
 
 class StartProfile extends StatefulWidget{
   const StartProfile({super.key});
@@ -19,9 +20,25 @@ class StartProfileState extends State<StartProfile>{
           SizedBox(height: 15,),
           Text('Profile Detail',style: TextStyle(fontSize: 32.00,fontWeight: FontWeight.bold),),
           SizedBox(height: 65,),
-          CircleAvatar(
-            radius: 50,
-            backgroundImage: AssetImage('assets/onbording/image1.png'),
+          Stack(
+            children: <Widget>[
+              CircleAvatar(
+                radius: 60,
+                backgroundImage: AssetImage('assets/onbording/image1.png'),
+              ),
+              Positioned(
+                right: 0,
+                bottom: 0,
+                child: CircleAvatar(
+                  radius: 20,
+                  backgroundColor: Colors.white,
+                  child: IconButton(
+                    icon:Icon(Icons.camera_alt_outlined,color: Color(0XFF7b4692),),
+                    onPressed: (){},
+                  ),
+                ),
+              ),
+            ],
           ),
           SizedBox(height: 35,),
           Center(
@@ -76,12 +93,35 @@ class StartProfileState extends State<StartProfile>{
                   }
                 },
               ),
+              SizedBox(height: 15,),
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'Height',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              SizedBox(height: 15,),
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'Location',
+                  border: OutlineInputBorder(),
+                ),
+                validator: (value){ 
+                  if(value==null || value.isEmpty){
+                  return 'Please enter your location' ;
+                  }
+                  else{
+                  return null;
+                  }
+                },
+              ),
+              
                 ],
               ),
               ),),
               SizedBox(height: 15,),
               ElevatedButton(onPressed: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context)=>GenderForm()));
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>Profile2()));
               },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color(0XFF7b4692),

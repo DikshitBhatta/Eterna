@@ -1,4 +1,3 @@
-import 'package:eterna/pages/otp_timer.dart';
 import'package:flutter/material.dart';
 import '../pages/start_profile.dart';
 
