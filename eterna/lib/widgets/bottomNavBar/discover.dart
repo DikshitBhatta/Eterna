@@ -40,7 +40,7 @@ class DiscoverState extends State<Discover>{
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
+                        color: Color.fromRGBO(158, 158, 158, 0.2),
                         spreadRadius: 2,
                         blurRadius: 7,
                         offset: Offset(0, 3),
@@ -60,7 +60,7 @@ class DiscoverState extends State<Discover>{
                     color: Colors.red.shade700,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
+                        color: Color.fromRGBO(158, 158, 158, 0.5), // Replace withOpacity
                         spreadRadius: 2,
                         blurRadius: 7,
                         offset: Offset(0, 3),
@@ -80,7 +80,7 @@ class DiscoverState extends State<Discover>{
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
+                        color: Color.fromRGBO(158, 158, 158, 0.2), // Replace withOpacity
                         spreadRadius: 2,
                         blurRadius: 7,
                         offset: Offset(0, 3),

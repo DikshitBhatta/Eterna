@@ -10,7 +10,7 @@ class StoriesState extends State<Stories>{
   @override
   Widget build (BuildContext context){
     return SafeArea(
-        child: Container(
+        child: SizedBox(
           height: 100, 
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
